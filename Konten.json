@@ -1,32 +1,38 @@
 [
   {
     "nama": "Bus Keren 1",
+    "kategori": "bus",
     "gambar": "https://via.placeholder.com/600x400?text=Bus+1",
     "download": "https://drive.google.com/uc?export=download&id=1GI7_K1XfB4nqhH3cScGXE0Dnx2wdzjm_"
   },
   {
-    "nama": "Truck keren 2",
+    "nama": "Truck Gagah 1",
+    "kategori": "truck",
     "gambar": "https://via.placeholder.com/600x400?text=Truck+1",
     "download": "https://drive.google.com/uc?export=download&id=1GI7_K1XfB4nqhH3cScGXE0Dnx2wdzjm_"
   },
   {
-    "nama": "Truck keren 3",
-    "gambar": "https://via.placeholder.com/600x400?text=Truck+1",
+    "nama": "Mobil Sport 1",
+    "kategori": "mobil",
+    "gambar": "https://via.placeholder.com/600x400?text=Mobil+1",
     "download": "https://drive.google.com/uc?export=download&id=1GI7_K1XfB4nqhH3cScGXE0Dnx2wdzjm_"
   },
   {
-    "nama": "Truck Keren 4",
-    "gambar": "https://via.placeholder.com/600x400?text=Truck+1",
+    "nama": "Kendaraan Unik 1",
+    "kategori": "unik",
+    "gambar": "https://via.placeholder.com/600x400?text=Unik+1",
     "download": "https://drive.google.com/uc?export=download&id=1GI7_K1XfB4nqhH3cScGXE0Dnx2wdzjm_"
   },
   {
-    "nama": "Truck Keren 5",
-    "gambar": "https://via.placeholder.com/600x400?text=Truck+1",
+    "nama": "Bus Mewah 2",
+    "kategori": "bus",
+    "gambar": "https://via.placeholder.com/600x400?text=Bus+2",
     "download": "https://drive.google.com/uc?export=download&id=1GI7_K1XfB4nqhH3cScGXE0Dnx2wdzjm_"
   },
   {
-    "nama": "Ujicoba Download",
-    "gambar": "https://via.placeholder.com/600x400?text=Truck+1",
-    "download": "https://drive.google.com/uc?export=download&id=1GI7_K1XfB4nqhH3cScGXE0Dnx2wdzjm_"
+    "nama": "Truck Tambang",
+    "kategori": "truck",
+    "gambar": "https://via.placeholder.com/600x400?text=Truck+2",
+    "download": "https://drive.google.com/uc?export=download&id=ID_FILE_TRUCK2"
   }
 ]
