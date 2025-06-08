@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kategori Kendaraan</title>
+  <style>
+    body { font-family: sans-serif; background: #f0f0f0; margin: 0; }
+    header { background: #333; color: white; padding: 20px; text-align: center; }
+    header nav a { color: white; margin: 0 10px; text-decoration: none; }
+    .container { max-width: 900px; margin: 30px auto; padding: 0 15px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 10px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); cursor: pointer; text-align: center; }
+    .card img { width: 100%; border-radius: 6px; }
+    .detail { display: none; background: white; padding: 20px; border-radius: 10px; margin-top: 30px; text-align: center; }
+    .download-btn { display: inline-block; margin-top: 15px; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 6px; }
+    .back-btn { margin-top: 20px; display: inline-block; cursor: pointer; color: #007bff; text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#">Bus</a>
+    <a href="#">Truck</a>
+    <a href="#">Mobil</a>
+    <a href="#">Unik</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="grid" id="content-grid"></div>
+
+  <div class="detail" id="detail-view">
+    <h2 id="detail-title"></h2>
+    <img id="detail-image" src="" alt="" />
+    <br>
+    <a id="download-link" class="download-btn" href="#" download target="_blank">Download</a>
+    <div class="back-btn" onclick="goBack()">← Kembali</div>
+  </div>
+</div>
+
+<script>
+  const jsonURL = "https://raw.githubusercontent.com/USERNAME/REPO/BRANCH/konten.json"; // ← GANTI URL
+
+  fetch(jsonURL)
+    .then(res => res.json())
+    .then(data => {
+      const grid = document.getElementById('content-grid');
+      data.forEach(item => {
+        const card = document.createElement('div');
+        card.className = "card";
+        card.innerHTML = `
+          <img src="${item.gambar}" alt="${item.nama}">
+          <h3>${item.nama}</h3>
+        `;
+        card.onclick = () => showDetail(item);
+        grid.appendChild(card);
+      });
+    })
+    .catch(err => {
+      document.getElementById('content-grid').innerHTML = "<p>Gagal memuat data konten.</p>";
+      console.error(err);
+    });
+
+  function showDetail(item) {
+    document.getElementById('content-grid').style.display = 'none';
+    const detail = document.getElementById('detail-view');
+    document.getElementById('detail-title').innerText = item.nama;
+    document.getElementById('detail-image').src = item.gambar;
+    document.getElementById('download-link').href = item.download;
+    detail.style.display = 'block';
+  }
+
+  function goBack() {
+    document.getElementById('detail-view').style.display = 'none';
+    document.getElementById('content-grid').style.display = 'grid';
+  }
+</script>
+
+</body>
+</html>
